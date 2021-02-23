@@ -1,6 +1,6 @@
 <data>
     <items>
-        <item name="item1">item1abc</item>
-        <item name="item2">item2abc</item>
+        <item name="item1" age="5">item1abc</item>
+        <item name="item2" age="52" >item2abc</item>
     </items>
 </data>
