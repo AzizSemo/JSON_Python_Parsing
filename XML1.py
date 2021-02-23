@@ -4,9 +4,9 @@ from xml.dom import minidom
 mydoc = minidom.parse('items.xml')
 
 items = mydoc.getElementsByTagName('item')
-
+#print(type(items))
 # one specific item attribute
-print('Item #2 attribute:')
+'''print('Item #2 attribute:')
 print(items[1].attributes['name'].value)
 
 # all item attributes
@@ -16,10 +16,22 @@ for elem in items:
 
 # one specific item's data
 print('\nItem #2 data:')
-print(items[1].firstChild.data)
-print(items[1].childNodes[0].data)
+print(items[0].firstChild.data)
+print(items[1].childNodes[0].data)'''
 
 # all items data
+i = 0
 print('\nAll item data:')
 for elem in items:
-    print(elem.firstChild.data)
+    print(str(elem.firstChild.data)+'   ' + str(items[i].attributes['name'].value))
+    #print(items[i].attributes['name'].value)
+    i += 1
+
+'''
+    <data>
+    <items>
+        <item name="item1">item1abc</item>
+        <item name="item2">item2abc</item>
+    </items>
+</data>
+'''
